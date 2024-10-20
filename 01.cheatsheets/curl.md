@@ -17,3 +17,5 @@
 |curl -X POST -d 'username=admin&password=admin'|http://<SERVER_IP>:<PORT>/	Send POST request with POST data|
 |curl -b 'PHPSESSID=c1nsa6op7vtk7kdis7bcnbadf1'|http://<SERVER_IP>:<PORT>/	Set request cookies|
 |curl -X POST -d '{"search":"london"}' -H 'Content-Type: application/json'|http://<SERVER_IP>:<PORT>/search.php	Send POST request with JSON data|
+|curl -IL http://test.nl|Grab webiste banner|
+|curl <ip>/robots.txt|List potential directories|
