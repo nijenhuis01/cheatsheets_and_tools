@@ -90,7 +90,7 @@
 
 ###PowerShell
 |command|Alias|Description|
-|---|---|
+|---|---|---|
 |Get-Item|gi|Retrieve an object (could be a file, folder, registry object, etc.)|
 |Get-ChildItem|ls / dir / gci|Lists out the content of a folder or registry hive|
 |New-Item|md / mkdir / ni|Create new objects. ( can be files, folders, symlinks, registry entries and more)|
@@ -105,3 +105,24 @@
 |Set-Content|sc|overwrite any content in a file with new data|
 |Clear-Content|clc|Clear the content of the files without deleting the file itself|
 |Compare-Object|diff / compare|Compare two or more objects against each other. This includes the object itself and the content within|
+
+###Input/Output Operators
+|command|Description|
+|---|---|
+|[command] > [file]|Redirects the output from a command into a file. Overwrites the specified files' contents|
+|[command] >> [file]|Redirects the output from a command into a file. Appends additional output without overwriting the file's original contents|
+|[command] < [file]|Redirects the output of the file and passes it into the command|
+|[command] | [command2]|Redirects the output of the first command into a <PIPE> and provides it to the second command|
+|[command] & [command2]|Executes both commands in succession. It does not perform checks to see if either command passes or fails|
+|[command] && [command2]|Checks to see if the first command executes successfully and then executes the second command. If the first command fails, the current command execution halts and the second command is not executed|
+
+###Find & Filter Content (CMD.exe)
+|command|Description|
+|---|---|
+|where <file>|Displays the location of file(s) provided|
+|where /R <working directory> <file>|Recursively searches for the file(s) provided starting from the specified directory|
+|find "example string" <file>|Searches for a string of text in a file or files, and displays lines of text that contain the specified string|
+|findstr|Searches for patterns of text in files. Similar to grep on Unix/Linux|
+|comp <file1> <file2>|Compares the contents of two files or sets of files byte-by-byte|
+|fc <file1> <file2>|Compares two files or sets of files and displays the differences between them|
+|sort|Reads input, sorts data, and writes the results to the screen, a file, or another device|
