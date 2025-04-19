@@ -53,3 +53,14 @@ sudo nmap 10.129.2.0/24 -sn -oA tnet | grep for | cut -d" " -f5
 |--max-rtt-timeout 100ms|Sets the specified time value as maximum RTT timeout|
 |--min-rate 300|Sets the number of packets that will be sent simultaneously|
 |-T <0-5>|Specifies the specific timing template|
+
+### TTL
+|Operationg System|Time To Life|TCP Window Size|
+|---|---|---|
+|Linux|64|5840|
+|FreeBSD|64|65535|
+|OpenBSD|64|16384|
+|Windows|128|65,535b to 1 GB|
+|Cisco Routers|255|4128|
+|Solaris|255|8760|
+|AIX|255|16384|
