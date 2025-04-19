@@ -4,6 +4,19 @@
 ```
 sudo nmap 10.129.2.0/24 -sn -oA tnet | grep for | cut -d" " -f5
 ```
+### Find Hosts with NMAP
+|Nmap options|Description|
+|---|---|
+|-sn| Disables port scan|
+|-PR|Arp scan|
+|-PU|UDP ping scan|
+|-PE|Echo ping scan|
+|-PP|ICMP Ping scan|
+|-PM|Mark ping scan|
+|-PS|SYN ping scan|
+|-PA|ACK ping scan|
+|-PO|Different protocols scan|
+|nmap -sn -PR 10.10.1.0/24||
 
 ### Scanning options
 |Nmap options|Description|
@@ -21,9 +34,12 @@ sudo nmap 10.129.2.0/24 -sn -oA tnet | grep for | cut -d" " -f5
 |-p22-110|Scan all ports between 22 and 110|
 |-p22,25|Scans only the specified ports 22 and 25|
 |-F|Scans top 100 ports|
-|-sS|Performs an TCP SYN-Scan|
-|-sA|Performs an TCP ACK-Scan|
-|-sU|Performs an UDP Scan|
+|-sS|Performs an TCP SYN-Scan Stealth Half open |
+|-sA|Performs an TCP ACK-Scan (No respons is statefull FW - RST = no FW)|
+|-sX|Xmas scan (FIN, URG, PUSH)|
+|-sM|Maimon scan (FIN, ACK)|
+|-sT|TCP scan (Full 3 way handshake end with a RST)|
+|-sU|Performs an UDP Scan (No repons = open - ICMP unreachable = port closed)|
 |-sV|Scans the discovered services for their versions|
 |-sC|Perform a Script Scan with scripts that are categorized as "default"|
 |--script <script>|Performs a Script Scan by using the specified scripts|
