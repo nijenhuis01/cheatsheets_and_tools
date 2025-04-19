@@ -70,6 +70,18 @@ sudo nmap 10.129.2.0/24 -sn -oA tnet | grep for | cut -d" " -f5
 |--min-rate 300|Sets the number of packets that will be sent simultaneously|
 |-T <0-5>|Specifies the specific timing template|
 
+### IDS/FW Evasion
+|Nmap Options|Description|
+|---|---|
+|-f|Split into ttiny fragments packets|
+|-g <80>|Source port manipulation (Vanaf poort 80 die misschien openstaat)|
+|-mtu <8>|Smaller packets|
+|RWD:<aantal>|vanaf <aantal> random IP adressen|
+|nmap -sT -Pn --spoof-mac 0 <IP>|
+|-Pn|Skip host discovery|
+|--spoof-mac 0|Ander MAC address|
+
+
 ### TTL
 |Operationg System|Time To Life|TCP Window Size|
 |---|---|---|
