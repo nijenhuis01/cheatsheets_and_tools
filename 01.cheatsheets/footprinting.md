@@ -86,6 +86,13 @@
 |evil-winrm -i <FQDN/IP> -u <user> -p <password>|Log in to the WinRM server|
 |wmiexec.py <user>:"<password>"@<FQDN/IP> "<system command>"|Execute command using the WMI service|
 
+### SNMP
+|command|Description|
+|---|---|
+|snmpwalk -v1 -c public [target IP]|displays all the OIDs, variables and other associated information|
+|-c|community string|
+| snmpwalk -v2c -c public [Target IP Address]|perform SNMPv2 enumeration on the target machine|
+
 ### Oracle TNS
 |command|Description|
 |---|---|
