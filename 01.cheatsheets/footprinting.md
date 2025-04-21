@@ -6,6 +6,14 @@
 |curl -s https://crt.sh/\?q\=<target-domain>\&output\=json | jq .|Certificate transparency|
 |for i in $(cat ip-addresses.txt);do shodan host $i;done|Scan each IP address in a list using Shodan|
 
+### NetBIOS on Windows CMD
+|command|Description|
+|---|---|
+|nbtstat -a <IP_Target>|Displays the NETBios name table of a remote computer|
+|nbtstat -c|lists the contents of the NetBIOS name cache of the remote computer|
+|net use|displays information about the target such as connection status, shared folder/drive and network information, as shown in the screenshot|
+
+
 ### Host-based Enumeration
 |command|Description|
 |---|---|
