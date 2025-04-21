@@ -53,6 +53,8 @@
 |command|Description|
 |---|---|
 |telnet <FQDN/IP> 25||
+| nmap -p 25 --script=smtp-enum-users [Target IP Address] |Find users|
+|nmap -p 25 --script=smtp-open-relay [Target IP Address]||
 
 ### MySQL
 |command|Description|
